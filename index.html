@@ -335,16 +335,16 @@
                   <form id="fr1">
                      <div class="row">
                         <div class="col-sm-12">
-                           <input class="contactus" placeholder="Name" type="text"  name="Name">
+                           <input class="contactus" placeholder="Name" type="text" id= "tbname" name="Name">
                         </div>
                         <div class="col-sm-12">
-                           <input class="contactus" placeholder="Phone" type="text" id="tb2" name="Email">
+                           <input class="contactus" placeholder="Phone" type="text" id="tbemail" name="Email">
                         </div>
                         <div class="col-sm-12">
                            <input class="contactus" placeholder="Email" type="text" id="tb1" name="Email">
                         </div>
                         <div class="col-sm-12">
-                           <textarea class="textarea" placeholder="Message" type="text" id="tb1"  name="Message"></textarea>
+                           <textarea class="textarea" placeholder="Message" type="text" id="tb2"  name="Message"></textarea>
                         </div>
                         <div class="col-sm-12">
                            <button class="send"  id="bt1" >Send</button>
@@ -426,8 +426,8 @@
          });
          $('#bt1').click(function() {
         $('#fr1').attr('action',
-                       'mailto:athulnalupurakkal@gmail.com?subject=' +
-                       $('#tb1').val() + '&body=' + $('#tb2').val());
+                       'mailto:qmedbiomedicalinnovation@qmed.net.in?subject= Enquiry from ' +
+                       $('#tbname').val() + '&body=' + $('#tb2').val());
         $('#fr1').submit();
          });
          $(".zoom").hover(function () {
