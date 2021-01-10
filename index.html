@@ -310,7 +310,7 @@
                                  of a page when looking at its layout. The point of using Lorem </p>
                            </div>
                         </div>
-                     </div>
+                     </div>   
                      <div class="carousel-item">
                         <img class="third-slide" src="images/testimonial-img.png">
                         <div class="container">
@@ -323,36 +323,47 @@
                            </div>
                         </div>
                      </div>
+                     <div class="row">
+                        <div class="col-sm-12">
+                           <label id="sd" style="visibility: hidden;"></label>
+                        </div>
+                     </div>
                   </div>
                   <a class="carousel-control-prev" href="#testimonial_slider" role="button" data-slide="prev"> <i
                         class='fa fa-angle-right'></i></a> <a class="carousel-control-next" href="#testimonial_slider"
                      role="button" data-slide="next"> <i class='fa fa-angle-left'></i></a>
                </div>
+               
             </div>
             <div class="col-xl-6 col-lg-6 col-md-6 col-sm-12">
                <div class="contact">
                   <h3>Contact Us</h3>
-                  <form id="fr1">
+                  <form method="POST" class="contact-form">
                      <div class="row">
                         <div class="col-sm-12">
                            <input class="contactus" placeholder="Name" type="text" id= "tbname" name="Name">
                         </div>
                         <div class="col-sm-12">
-                           <input class="contactus" placeholder="Phone" type="text" id="tbemail" name="Email">
+                           <input class="contactus" placeholder="Phone" type="text" id="tbphone" name="Email">
                         </div>
                         <div class="col-sm-12">
-                           <input class="contactus" placeholder="Email" type="text" id="tb1" name="Email">
+                           <input class="contactus" placeholder="Email" type="text" id="tbemail" name="Email">
                         </div>
                         <div class="col-sm-12">
-                           <textarea class="textarea" placeholder="Message" type="text" id="tb2"  name="Message"></textarea>
+                           <textarea class="textarea" placeholder="Message" type="text" id="tbmessage"  name="Message"></textarea>
                         </div>
                         <div class="col-sm-12">
-                           <button class="send"  id="bt1" >Send</button>
+                           <button class="send" >Send</button>
+                        </div>
+                        <div class="col-sm-12" id="success" style="text-align: center; color:green;">
+                           <label >Mail Send Successfully</label>
                         </div>
                      </div>
+                    
                   </form>
                </div>
             </div>
+            
          </div>
       </div>
    </div>
@@ -418,18 +429,16 @@
    <script src="js/jquery.mCustomScrollbar.concat.min.js"></script>
    <script src="js/custom.js"></script>
    <script src="https:cdnjs.cloudflare.com/ajax/libs/fancybox/2.1.5/jquery.fancybox.min.js"></script>
+   <script src="https://smtpjs.com/v3/smtp.js"></script>
+   <script src="app.js"></script>
+   
    <script>
       $(document).ready(function () {
          $(".fancybox").fancybox({
             openEffect: "none",
             closeEffect: "none"
          });
-         $('#bt1').click(function() {
-        $('#fr1').attr('action',
-                       'mailto:qmedbiomedicalinnovation@qmed.net.in?subject= Enquiry from ' +
-                       $('#tbname').val() + '&body=' + $('#tb2').val());
-        $('#fr1').submit();
-         });
+
          $(".zoom").hover(function () {
 
             $(this).addClass('transition');

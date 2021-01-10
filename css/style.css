@@ -115,7 +115,7 @@ h4 a,
 h5 a,
 h6 a {
 	color: #212121;
-	text-decoration: none!important;
+	text-decoration: none !important;
 	opacity: 1
 }
 
@@ -2403,4 +2403,10 @@ ul.contant_icon li img {
 	left: 10px;
 	top: inherit;
 	bottom: 10px;
+}
+
+/* my custom css */
+#success {
+	text-align: center;
+	text-align: center;
 }
